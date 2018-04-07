@@ -9,3 +9,6 @@ main.o: main.c load_object.h
 
 load_object.o : load_object.c load_object.h program_error.h
 	gcc -c load_object.c
+
+clean:
+	rm *.o
