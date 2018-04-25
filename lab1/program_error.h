@@ -1,7 +1,7 @@
 #ifndef _PROGRAM_ERROR_
 #define _PROGRAM_ERROR_
 
-enum {
+typedef enum {
 	NO_ERROR,
 
 	FILE_CANNOT_BE_OPENED,
@@ -10,30 +10,10 @@ enum {
 	OBJECT_IS_NOT_INITIALISED,
 	RENDERING_ERROR,
 
-	WRONG_FUNCTION_ARGUMENT,
+	SCENE_IS_NOT_INITIALISED,
+
 	ALLOCATION_ERROR,
 
-};
-
-void check_state(int error)
-{
-	switch (error)
-	{
-		case NO_ERROR:
-			return;
-		case FILE_CANNOT_BE_OPENED:
-			//
-		case FILE_CONTAINS_INVALID_VALUES:
-			//
-		case OBJECT_IS_NOT_INITIALISED:
-			//
-		case RENDERING_ERROR:
-			//
-		case WRONG_FUNCTION_ARGUMENT:
-			//
-		case ALLOCATION_ERROR:
-			//
-	}
-}
+} error_t;
 
 #endif
